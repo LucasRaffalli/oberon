@@ -13,7 +13,7 @@ export default function Footer() {
                     <span>Name</span>
                 </div>
                 <div className='Title'>OBERON</div>
-                <div>By Lucas Raffalli</div>
+                <div className='NameFooter'>By Lucas Raffalli</div>
             </section>
         </footer>
     )

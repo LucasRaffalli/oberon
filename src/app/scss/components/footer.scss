@@ -3,19 +3,27 @@
 footer {
     padding: 1rem;
     background-color: $black;
-    height: 20rem;
+    height: fit-content;
     width: 100%;
     color: white;
+
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    a {
+        color: white;
+        text-decoration: none;
+        text-decoration-color: white;
+    }
 
     .FooterInner {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+
         .Title {
             padding: 1rem;
             font-size: 7.5rem;
@@ -26,4 +34,29 @@ footer {
             display: flex;
         }
     }
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        height: fit-content;
+
+        .FooterInner {
+            .Title {
+                font-size: 3rem;
+            }
+
+            .NameFooter {
+                font-size: 0.5rem;
+            }
+
+            .FooterContainer {
+                gap: 3rem;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+            }
+        }
+    }
+
 }
