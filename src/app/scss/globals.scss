@@ -5,15 +5,10 @@
     padding: 0;
     font-family: Italiana;
     margin: 0;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
+    transition: all 0.5s linear;
     pointer-events: auto;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
 #MainContent{
     padding-top: 0;
@@ -24,8 +19,8 @@
 }
 
 $black: #0D0D0D;
+$argent: #5C5B63;
 
-#Image {
-    height: 100%;
-    width: 100%;
+::-webkit-scrollbar {
+    display: none;
 }

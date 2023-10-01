@@ -21,7 +21,7 @@ export default function Navbar() {
     }, []);
     return (
         <nav className={isScrolled ? 'scrolled' : ''}>
-            OBERON
+            <h1>OBERON</h1>
         </nav>
     )
 }
