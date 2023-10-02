@@ -2,20 +2,18 @@
 
 
 * {
-    padding: 0;
     font-family: Italiana;
+    transition: all 0.25s linear;
+    box-sizing: border-box;
     margin: 0;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    pointer-events: auto;
+    padding: 0;
+    border: 0;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-#MainContent{
+a {
+    text-decoration: none;
+  }
+#MainContent {
     padding-top: 0;
     position: relative;
     min-height: 100vh;
@@ -23,9 +21,18 @@
     margin: 0 auto;
 }
 
-$black: #0D0D0D;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    background-color: transparent;
+}
 
-#Image {
-    height: 100%;
-    width: 100%;
+$black: #0D0D0D;
+$argent: #5C5B63;
+$gold: #b5a663;
+
+::-webkit-scrollbar {
+    display: none;
 }

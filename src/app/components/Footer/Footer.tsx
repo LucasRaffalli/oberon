@@ -4,17 +4,7 @@ import '../../scss/components/footer.scss'
 export default function Footer() {
     return (
         <footer>
-            <section className='FooterInner'>
-                <div className='FooterContainer'>
-                    <div><a href="mailto:Email-Ici">Nom de lEmail ici</a></div>
-                    <span>Name</span>
-                    <span>Name</span>
-                    <span>Name</span>
-                    <span>Name</span>
-                </div>
-                <div className='Title'>OBERON</div>
-                <div className='NameFooter'>By Lucas Raffalli</div>
-            </section>
+           <h2>footer</h2>
         </footer>
     )
 }
