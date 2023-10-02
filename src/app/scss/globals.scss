@@ -2,15 +2,18 @@
 
 
 * {
-    padding: 0;
     font-family: Italiana;
+    transition: all 0.25s linear;
+    box-sizing: border-box;
     margin: 0;
-    transition: all 0.5s linear;
-    pointer-events: auto;
+    padding: 0;
+    border: 0;
 }
 
-
-#MainContent{
+a {
+    text-decoration: none;
+  }
+#MainContent {
     padding-top: 0;
     position: relative;
     min-height: 100vh;
@@ -18,8 +21,17 @@
     margin: 0 auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    background-color: transparent;
+}
+
 $black: #0D0D0D;
 $argent: #5C5B63;
+$gold: #b5a663;
 
 ::-webkit-scrollbar {
     display: none;
