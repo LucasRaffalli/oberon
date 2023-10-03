@@ -105,7 +105,8 @@
 //! SECTION5
 
 .section5 {
-  height: 100vh;
+  // height: 100vh;
+  height: fit-content;
   border-top: 10px solid #b5a663;
 }
 
@@ -126,7 +127,7 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
-  width: 70%;
+  // width: 70%;
   margin: 0 auto;
   padding: 3rem;
 }

@@ -87,13 +87,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section6">
-        <div className="separation">
-          <div className="line"></div>
-          <h2>OBERON | SHOP</h2>
-          <div className="line"></div>
-        </div>
-      </section>
     </main>
   );
 }
