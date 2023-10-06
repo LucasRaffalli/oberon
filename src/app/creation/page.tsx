@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import '../scss/mariage/mariage.scss'
+import '../scss/creation/creation.scss'
 import { useState } from 'react'
 
 

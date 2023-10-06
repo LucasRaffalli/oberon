@@ -23,6 +23,10 @@
 
     h1 {
       font-size: 4rem;
+
+      a {
+        color: white;
+      }
     }
   }
 
@@ -38,7 +42,6 @@
     padding: 1rem;
     height: 5rem;
     font-size: 1.4rem;
-    gap: 3rem;
 
     &.open {
       display: block;
@@ -58,6 +61,38 @@
 
     a {
       color: white;
+    }
+
+    .menu-item {
+      padding: 1rem 3rem;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        .subMenu {
+          display: block;
+        }
+      }
+
+      &.active {
+        // Styles pour l'onglet actif
+        // ...
+      }
+    }
+
+    .subMenu {
+      color: black;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      p {
+        margin: 0;
+      }
     }
   }
 }
@@ -117,4 +152,43 @@
 
 .open .bottomNav {
   display: block;
+}
+
+
+.subMenu {
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  background-color: $black;
+}
+
+.subMenu.visible {
+  display: block;
+}
+
+.subMenu {
+  height: fit-content;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .SubMenuGlobal {
+    display: flex;
+    gap: 35rem;
+    align-items: center;
+
+    .SubMenuInner {
+      color: white;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: white;
+        font-weight: to-upper-case($string: "");
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
