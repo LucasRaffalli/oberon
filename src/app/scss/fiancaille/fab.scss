@@ -1,0 +1,116 @@
+ @import "../globals.scss";
+ @import "../components/commun.scss";
+
+
+ .section1 {
+   height: 100vh;
+   width: 100%;
+   background: linear-gradient(to top,
+       rgba(255, 255, 255, 0.961),
+       rgba(128, 128, 128, 0.1) 30%,
+       transparent 100%),
+     url("/fiancailles.png");
+   background-size: cover;
+   background-position: center;
+ }
+
+ .section-rings {
+   background: linear-gradient(to bottom,
+       #fcfbfb,
+       rgba(255, 255, 255, 0.527) 10%,
+       transparent 100%);
+
+   .h1 {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     font-size: 3rem;
+   }
+ }
+
+ .ring-list {
+   padding: 10rem;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5rem;
+   align-items: center;
+   justify-content: center;
+
+   .MariageB,
+   .AllianceB {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+     P {
+       text-align: center;
+       width: 17rem;
+       margin: 1.5rem 0;
+       font-size: 1rem;
+     }
+   }
+ }
+
+ .bijouxMariageOthers {
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+
+   .bijouxMariageOthersImg {
+     height: 100%;
+     width: 100%;
+     background:
+       url("/img/bracelet-diamond.png");
+     background-size: cover;
+     background-position: center;
+   }
+
+   .BijouxDesc {
+     gap: 4rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+
+     h2 {
+       font-size: 3rem;
+     }
+
+     p {
+       font-size: 2rem;
+       text-align: center;
+       width: 42rem;
+     }
+   }
+ }
+
+
+
+ .ring-list-fiancaille {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   .ring-list {
+     .ring-item {
+      display: flex;
+     }
+
+     .MariageB,
+     .AllianceB {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+
+       P {
+         text-align: center;
+         width: 17rem;
+         margin: 1.5rem 0;
+         font-size: 1rem;
+       }
+     }
+   }
+ }

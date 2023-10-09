@@ -2,15 +2,27 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
+import { useRouter } from "next/navigation";
 import Button from "./components/common/button";
 import "./scss/page.scss";
+import Link from "next/link";
 
-const btnConsole1: () => void = () => {
-  console.log("btn-decouvrir section 2");
-}
 
 
 export default function Home() {
+  const router = useRouter()
+  const btnConsole1: () => void = () => {
+    console.log("btn-decouvrir section 2");
+  }
+  const Fiancaille: () => void = () => {
+    console.log("to mariage");
+    router.push("/fiancaille&mariage/mariage");
+  }
+  const Alliance: () => void = () => {
+    console.log("to alliances");
+    router.push("/fiancaille&mariage/alliances");
+  }
+
   return (
     <main id="MainContent">
       <section className="home"></section>
@@ -68,7 +80,7 @@ export default function Home() {
           il nous transcende et nous rend meilleurs.
         </p>
         <div className="bagues">
-          <div>
+          <div id="bHfiancaille">
             <img src="/img/bagueSection5.png" alt="" />
             <h2>Bagues de fiançailles</h2>
             <p>
@@ -76,14 +88,16 @@ export default function Home() {
               fiançailles en diamant Oberon , précieux symbole du véritable
               amour.
             </p>
+            <Button text={"Découvrir"} onClick={Fiancaille} />
           </div>
-          <div>
+          <div id="bHalliances">
             <img src="/img/bg2Section5.png" alt="" />
             <h2>Alliances</h2>
             <p>
               Célébrons à jamais et ensemble ce moment avec une alliance en
               diamant Oberon, évoquant votre grande histoire d’amour.
             </p>
+            <Button text={"Découvrir"} onClick={Alliance} />
           </div>
         </div>
       </section>
