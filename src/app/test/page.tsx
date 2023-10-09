@@ -16,6 +16,8 @@ export default function test() {
             <section className='testpage'>
                 <h1>test page</h1>
                 <HamburgerMenu/>
+
+                <div className='test2'></div>
             </section>
         </main>
     )

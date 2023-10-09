@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
+import MenuBurgerIcon from "public/svg/burger.svg";
+import MenuBurgerCrossIcon from "public/svg/burgerCross.svg";
 import { useEffect, useState } from "react";
 import "../../scss/components/navbar.scss";
-import MenuBurgerIcon from "public/svg/burger.svg"
-import MenuBurgerCrossIcon from "public/svg/burgerCross.svg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,16 +17,17 @@ export default function Navbar() {
     fiancaille: <FiancailleSousMenu />,
     service: <ServiceSousMenu />,
     creation: <CreationSousMenu />,
-    nouveau: <NouveauSousMenu />
+    nouveau: <NouveauSousMenu />,
   };
 
   function FiancailleSousMenu() {
     return (
       <div className="SubMenuGlobal">
         <div className="SubMenuInner">
-          <h3>Fiançailles & Mariages</h3>
-          <Link href="" >Bague de mariage</Link>
-          <Link href="" >Alliance</Link>
+          <h3>Fiançailles & Allaince</h3>
+          <Link href="/fiancaille&mariage/fiancaille">Bague de Fiançailles</Link>
+          <Link href="/fiancaille&mariage/alliances">Alliances</Link>
+          <Link href="/fiancaille&mariage/bijoux">Bijoux de mariages</Link>
         </div>
         <img src="/img/bagueSection5.png" alt="test" />
       </div>
@@ -72,7 +74,6 @@ export default function Navbar() {
     setIsSubMenuVisible(false);
   };
 
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -88,7 +89,6 @@ export default function Navbar() {
     };
   }, []);
 
-
   const handleBurgerClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -96,27 +96,40 @@ export default function Navbar() {
   return (
     <section className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="topNav">
-        <div className={`nav-icon burger ${isMenuOpen ? "open" : ""}`} onClick={handleBurgerClick}>
-          {isMenuOpen ? <MenuBurgerCrossIcon className="SvgIcon" /> : <MenuBurgerIcon />}
+        <div
+          className={`nav-icon burger ${isMenuOpen ? "open" : ""}`}
+          onClick={handleBurgerClick}
+        >
+          {isMenuOpen ? (
+            <MenuBurgerCrossIcon className="SvgIcon" />
+          ) : (
+            <MenuBurgerIcon />
+          )}
         </div>
-        <h1> <Link href="/"> OBERON</Link></h1>
-        <div className="nav-icon map">Icone de localisation</div>
+        <h1>
+          {" "}
+          <Link href="/"> OBERON</Link>
+        </h1>
+        <div className="nav-icon map">
+          <a href="/localiser">
+            <img src="/iconAdresse.png" alt="adresse" />
+          </a>
+        </div>
       </div>
 
       <div className={`bottomNav ${isMenuOpen ? "open" : ""}`}>
         <div
-          className={`menu-item ${activeMenu === "fiancaille&mariage" ? "active" : ""}`}
+          className={`menu-item ${
+            activeMenu === "fiancaille&mariage" ? "active" : ""
+          }`}
           onMouseEnter={() => handleMenuEnter("fiancaille")}
-
         >
-          <Link href="/fiancaille&mariage">Fiançailles & Mariages</Link>
+          <Link href="/fiancaille&mariage">Fiançailles & Alliance</Link>
         </div>
-
 
         <div
           className={`menu-item ${activeMenu === "creation" ? "active" : ""}`}
           onMouseEnter={() => handleMenuEnter("creation")}
-
         >
           <Link href="/creation">Nos créations</Link>
         </div>
@@ -124,7 +137,6 @@ export default function Navbar() {
         <div
           className={`menu-item ${activeMenu === "creation" ? "active" : ""}`}
           onMouseEnter={() => handleMenuEnter("service")}
-
         >
           <Link href="/services">Services</Link>
         </div>
@@ -132,20 +144,20 @@ export default function Navbar() {
         <div
           className={`menu-item ${activeMenu === "nouveau" ? "active" : ""}`}
           onMouseEnter={() => handleMenuEnter("nouveau")}
-
         >
           <Link href="/nouveau">À découvrir</Link>
         </div>
-
       </div>
 
       {isSubMenuVisible && activeMenu && (
-        <div className="subMenu" onMouseEnter={() => setIsSubMenuVisible(true)} onMouseLeave={handleMenuLeave}>
+        <div
+          className="subMenu"
+          onMouseEnter={() => setIsSubMenuVisible(true)}
+          onMouseLeave={handleMenuLeave}
+        >
           {sousMenus[activeMenu]}
         </div>
       )}
     </section>
-
-
   );
 }
